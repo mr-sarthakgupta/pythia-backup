@@ -1,0 +1,1215 @@
+Index,Target,Decoded Target,Decoded Output,Context Length,Target Length,Memorized,Baseline Memorized
+8390,"[187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187]","
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+","general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+",51,51,"tensor(True, device='cuda:0')",False
+Final Summary,,,,51,51,"Total Memorized: 9.889240506329114e-05, Index List: [8390]",
+8390,"[187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691]","
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general","general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general",51,102,"tensor(True, device='cuda:0')",False
+Final Summary,,,,51,102,"Total Memorized: 9.889240506329114e-05, Index List: [8390]",
+8390,"[187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691]","
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general","general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general",51,204,"tensor(True, device='cuda:0')",False
+Final Summary,,,,51,204,"Total Memorized: 9.889240506329114e-05, Index List: [8390]",
+Final Summary,,,,51,512,"Total Memorized: 0.0, Index List: []",
+5266,"[14719, 2295, 337, 10, 187, 50262, 3306, 15, 22339, 1587, 14719, 33711, 6788, 41090, 426, 346, 33711, 16261, 3, 187, 50266, 7271, 604, 313, 2577, 14719, 2295, 374, 10, 187, 50262, 3306, 15, 22339, 1587, 14719, 33711, 6788, 41090, 426, 346, 33711, 17272, 3, 187, 50266, 7271, 604, 313, 2577, 14719]","random == 1)
+                document.getElementById(""randomQuote"").innerHTML = ""Quote 02""
+            else if (myrandom == 2)
+                document.getElementById(""randomQuote"").innerHTML = ""Quote 03""
+            else if (myrandom","Q:
+
+JavaScript - Loop through non-repeating values displaying only one at a time
+
+I have this page with a button the user can click on to generate a random quote.
+I started with something like this:
+
+        function randomize() {
+            var myrandom = Math.round(Math.random() * 4)
+            if (myrandom == 0)
+                document.getElementById(""randomQuote"").innerHTML = ""Quote 01""
+            else if (myrandom == 1)
+                document.getElementById(""randomQuote"").innerHTML = ""Quote 02""
+            else if (myrandom == 2)
+                document.getElementById(""randomQuote"").innerHTML = ""Quote 03""
+            else if (myrandom",102,51,"tensor(True, device='cuda:0')",False
+8390,"[16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691]","general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general","general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general",102,51,"tensor(True, device='cuda:0')",False
+Final Summary,,,,102,51,"Total Memorized: 0.00019778481012658228, Index List: [5266, 8390]",
+8390,"[16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187]","general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+","general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+",102,102,"tensor(True, device='cuda:0')",False
+Final Summary,,,,102,102,"Total Memorized: 9.889240506329114e-05, Index List: [8390]",
+Final Summary,,,,102,204,"Total Memorized: 0.0, Index List: []",
+Final Summary,,,,102,512,"Total Memorized: 0.0, Index List: []",
+406,"[2439, 6144, 15, 16194, 70, 556, 6107, 2067, 1029, 6222, 3394, 824, 347, 253, 13533, 5625, 15913, 14964, 313, 15293, 3269, 428, 7857, 708, 4267, 582, 253, 18770, 11412, 16428, 18165, 313, 8643, 16568, 434, 4748, 10, 342, 308, 5256, 15, 12101, 13, 13533, 40782, 12664, 313, 7857, 14, 7199, 10]"," across Canada. Skye has covered several high profile events such as the Toronto International Film Festival (TIFF -2009 & 2010), the Much Music Video Awards (MMVA's 2009) with Tdot.TV, Toronto Fashion Week (2009-2010)","Skye Collyer
+
+Date of Birth:
+
+Height:
+
+5\' 6\"" (1.68 m)
+
+Biography:
+
+Skye Collyer began her TV career as co-host of TSN's Scooter Girls while still at theatre school and, since 2007, has been national host of GTV's Watch and Win movie night every weekend across Canada. Skye has covered several high profile events such as the Toronto International Film Festival (TIFF -2009 & 2010), the Much Music Video Awards (MMVA's 2009) with Tdot.TV, Toronto Fashion Week (2009-2010) with SunTV, Rogers TV Buffalo Bills game day segments, live OHL and pre-game LeafsTV Gate5 Live coverage... more
+
+Skye Collyer began her TV career as co-host of TSN's Scooter Girls while still at theatre school and, since 2007, has been national host of GTV's Watch and Win movie night every weekend across Canada. Skye has covered several high profile events such as the Toronto International Film Festival (TIFF -2009 & 2010), the Much Music Video Awards (MMVA's 2009) with Tdot.TV, Toronto Fashion Week (2009-2010)",204,51,"tensor(True, device='cuda:0')",False
+1714,"[50270, 29, 2551, 966, 568, 27027, 876, 6172, 1138, 24, 870, 2551, 31, 187, 50270, 29, 2551, 966, 568, 27027, 876, 6172, 1138, 25, 870, 2551, 31, 187, 50270, 29, 2551, 966, 568, 27027, 876, 6172, 1138, 26, 870, 2551, 31, 187, 50270, 29, 2551, 966, 568, 27027, 876, 6172, 1138]","        <span class=""blocks__block"">7</span>
+        <span class=""blocks__block"">8</span>
+        <span class=""blocks__block"">9</span>
+        <span class=""blocks__block"">","<!DOCTYPE html>
+<html lang=""en"">
+<head>
+    <meta charset=""UTF-8"">
+    <title>Page 1 - Infinite Ajax Scroll</title>
+
+    <link rel=""stylesheet"" href=""style.css""/>
+</head>
+<body>
+
+<div class=""surface-container"">
+    <div class=""pager"">
+      <a href=""page2.html"" class=""pager__next"">Next page &rightarrow;</a>
+    </div>
+
+    <div class=""blocks"">
+        <span class=""blocks__block"">1</span>
+        <span class=""blocks__block"">2</span>
+        <span class=""blocks__block"">3</span>
+        <span class=""blocks__block"">4</span>
+        <span class=""blocks__block"">5</span>
+        <span class=""blocks__block"">6</span>
+        <span class=""blocks__block"">7</span>
+        <span class=""blocks__block"">8</span>
+        <span class=""blocks__block"">9</span>
+        <span class=""blocks__block"">",204,51,"tensor(True, device='cuda:0')",False
+2873,"[690, 273, 253, 17614, 468, 13471, 327, 253, 47350, 15, 2809, 12155, 73, 15, 2042, 352, 434, 346, 19405, 23616, 3, 3511, 13, 755, 745, 253, 1824, 323, 36521, 285, 6773, 715, 253, 2360, 15, 48290, 403, 9123, 12433, 893, 261, 13, 1755, 7779, 285, 686, 49381, 5943, 15, 29779, 609]"," some of the sharper breaks on the flats.Shhhh.If it's ""Africa"" hot, get off the water for awhile and fish into the night.Fish are eating bucktais, topwater and 'Dawgs.Prepare","Share this post
+
+Link to post
+
+Share on other sites
+
+SJonesi 0
+
+Just like Paul said. This is a great time to be on the Pond as the entire lake is alive with activity. There are literally fish everywhere. Weeds, rock and sand all hold fish right now. Get adventurous and troll some of the sharper breaks on the flats.Shhhh.If it's ""Africa"" hot, get off the water for awhile and fish into the night.Fish are eating bucktais, topwater and 'Dawgs.Prepare for success and have a blast. Steve
+
+Share this post
+
+Link to post
+
+Share on other sites
+
+deerhuntr8 0
+
+Just like Paul said. This is a great time to be on the Pond as the entire lake is alive with activity. There are literally fish everywhere. Weeds, rock and sand all hold fish right now. Get adventurous and troll some of the sharper breaks on the flats.Shhhh.If it's ""Africa"" hot, get off the water for awhile and fish into the night.Fish are eating bucktais, topwater and 'Dawgs.Prepare",204,51,"tensor(True, device='cuda:0')",False
+3745,"[13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 187, 50266, 1092, 2490, 50266, 60, 187, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490]",", 
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+","Q:
+
+Parse JSON number array using Gson
+
+This is the JSON string I want to parse with Gson. I would like to quick and simple to parse it.   
+{
+    ""values"": [
+        [
+            1, 
+            1, 
+            0, 
+            0, 
+            0, 
+            0, 
+            11, 
+            0.09090909090909091
+        ], 
+        [
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                1, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                1, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+",204,51,"tensor(True, device='cuda:0')",False
+4866,"[77, 27, 686, 1010, 1383, 187, 50276, 78, 27, 686, 1047, 1383, 187, 50276, 79, 27, 686, 1012, 1383, 187, 50276, 80, 27, 686, 805, 1383, 187, 50276, 81, 27, 686, 883, 1383, 187, 50276, 82, 27, 686, 740, 1383, 187, 50276, 83, 27, 686, 26, 1383, 187, 50276, 84, 27]","l: '15',
+  m: '14',
+  n: '13',
+  o: '12',
+  p: '11',
+  q: '10',
+  r: '9',
+  s:","Q:
+
+Is it possible to check the condition of a value of an object and JUST return the key?
+
+I have an object of letters and numbers inside of a function. This function takes in an array of numbers and I'm running a for in loop that iterates over the object and checks a condition. If any of the numbers in the array match any of the values in the object, return just the key to that value. 
+So If I pass in switcher(['26']), it should return 'a'. Is this possible?
+function switcher(x){
+const letters = {
+  a: '26',
+  b: '25',
+  c: '24',
+  d: '23',
+  e: '22',
+  f: '21',
+  g: '20',
+  h: '19',
+  i: '18',
+  j: '17',
+  k: '16',
+  l: '15',
+  m: '14',
+  n: '13',
+  o: '12',
+  p: '11',
+  q: '10',
+  r: '9',
+  s:",204,51,"tensor(True, device='cuda:0')",False
+7541,"[285, 12717, 868, 432, 9685, 4707, 15, 5721, 39643, 6906, 13, 2266, 285, 12112, 4458, 437, 338, 1591, 1308, 382, 868, 534, 588, 1289, 504, 949, 667, 1511, 273, 4707, 13, 253, 843, 36874, 16463, 671, 556, 36104, 53, 2824, 387, 253, 12192, 273, 253, 1308, 382, 868, 281, 30877, 253]"," and tangles from wet hair. Featuring thin, strong and flexible Intelliflex bristles which will glide through any type of hair, the detangling brush also has SofTips at the tips of the bristles to massage the","Most popular gifts for men
+
+gifts for men on other UK sites
+
+Are the men in your life notoriously hard to buy for? Fear not weve got you covered with a spectacular selection of over 1000 Tasty Treat, Driving Blast and Adrenaline Adventure experience days. From gourmet cuisine at top restaurants, to bungee jumping from phenomenal heights, to grooming treatments to have him looking and feeling at his best, he is sure to find something suitable! Regardless of
+
+The WetBrush for Men will painlessly remove knots and tangles from wet hair. Featuring thin, strong and flexible Intelliflex bristles which will glide through any type of hair, the detangling brush also has SofTips at the tips of the bristles to massage the scalp and stimulate circulation at the follicle. Firm enough to banish knots yet flexible enough to be kind to your hair and scalp, the
+
+The WetBrush for Men will painlessly remove knots and tangles from wet hair. Featuring thin, strong and flexible Intelliflex bristles which will glide through any type of hair, the detangling brush also has SofTips at the tips of the bristles to massage the",204,51,"tensor(True, device='cuda:0')",False
+8390,"[16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691, 187, 16691]","general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general","general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general
+general",204,51,"tensor(True, device='cuda:0')",False
+8558,"[24681, 310, 2752, 39914, 2460, 1180, 608, 24681, 310, 2752, 39914, 2460, 1180, 721, 24681, 310, 2752, 39914, 2460, 1180, 818, 24681, 310, 2752, 39914, 2460, 1180, 854, 24681, 310, 2752, 39914, 2460, 1180, 898, 24681, 310, 2752, 39914, 2460, 1180, 884, 24681, 310, 2752, 39914, 2460, 1180, 1903, 24681, 310]",Mom is My Doll image number 5Mom is My Doll image number 6Mom is My Doll image number 7Mom is My Doll image number 8Mom is My Doll image number 9Mom is My Doll image number 10Mom is My Doll image number 11Mom is,"Mom is My Doll free Porn Comic
+
+Porn Comic : Mom is My Doll
+
+Mom is My Doll image number 1Mom is My Doll image number 2Mom is My Doll image number 3Mom is My Doll image number 4Mom is My Doll image number 5Mom is My Doll image number 6Mom is My Doll image number 7Mom is My Doll image number 8Mom is My Doll image number 9Mom is My Doll image number 10Mom is My Doll image number 11Mom is",204,51,"tensor(True, device='cuda:0')",False
+Final Summary,,,,204,51,"Total Memorized: 0.0007911392405063291, Index List: [406, 1714, 2873, 3745, 4866, 7541, 8390, 8558]",
+3745,"[13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 187, 50266, 1092, 2490, 50266, 60, 187, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 187, 50266, 1092, 2490, 50266, 60, 187, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262, 17, 187, 50266, 1092, 2490, 50266, 60, 187, 50262, 17, 13, 2490, 50262, 17, 13, 2490, 50262]",", 
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                ","Q:
+
+Parse JSON number array using Gson
+
+This is the JSON string I want to parse with Gson. I would like to quick and simple to parse it.   
+{
+    ""values"": [
+        [
+            1, 
+            1, 
+            0, 
+            0, 
+            0, 
+            0, 
+            11, 
+            0.09090909090909091
+        ], 
+        [
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                1, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                1, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                ",204,102,"tensor(True, device='cuda:0')",False
+4866,"[1036, 1383, 187, 50276, 77, 27, 686, 1010, 1383, 187, 50276, 78, 27, 686, 1047, 1383, 187, 50276, 79, 27, 686, 1012, 1383, 187, 50276, 80, 27, 686, 805, 1383, 187, 50276, 81, 27, 686, 883, 1383, 187, 50276, 82, 27, 686, 740, 1383, 187, 50276, 83, 27, 686, 26, 1383, 187, 50276, 84, 27, 686, 25, 1383, 187, 50276, 85, 27, 686, 24, 1383, 187, 50276, 86, 27, 686, 23, 1383, 187, 50276, 87, 27, 686, 22, 1383, 187, 50276, 88, 27, 686, 21, 1383, 187, 50276, 89, 27, 686, 20, 1383, 187, 50276, 90, 27, 686, 19, 1383, 187, 50276]","16',
+  l: '15',
+  m: '14',
+  n: '13',
+  o: '12',
+  p: '11',
+  q: '10',
+  r: '9',
+  s: '8',
+  t: '7',
+  u: '6',
+  v: '5',
+  w: '4',
+  x: '3',
+  y: '2',
+  ","Q:
+
+Is it possible to check the condition of a value of an object and JUST return the key?
+
+I have an object of letters and numbers inside of a function. This function takes in an array of numbers and I'm running a for in loop that iterates over the object and checks a condition. If any of the numbers in the array match any of the values in the object, return just the key to that value. 
+So If I pass in switcher(['26']), it should return 'a'. Is this possible?
+function switcher(x){
+const letters = {
+  a: '26',
+  b: '25',
+  c: '24',
+  d: '23',
+  e: '22',
+  f: '21',
+  g: '20',
+  h: '19',
+  i: '18',
+  j: '17',
+  k: '16',
+  l: '15',
+  m: '14',
+  n: '13',
+  o: '12',
+  p: '11',
+  q: '10',
+  r: '9',
+  s: '8',
+  t: '7',
+  u: '6',
+  v: '5',
+  w: '4',
+  x: '3',
+  y: '2',
+  ",204,102,"tensor(True, device='cuda:0')",False
+Final Summary,,,,204,102,"Total Memorized: 0.00019778481012658228, Index List: [3745, 4866]",
+Final Summary,,,,204,204,"Total Memorized: 0.0, Index List: []",
