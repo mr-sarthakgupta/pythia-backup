@@ -1,0 +1,40 @@
+name: hello-world
+compute:
+  gpus: 8
+image: python
+integrations:
+  - integration_type: git_repo
+    git_repo: mr-sarthakgupta/pythia-backup  # Your public repository
+    git_branch: main  # Default branch (or specify another branch if needed)
+    path: /workspace/run_exp_clone22 # Where to clone the repo
+
+command: |
+ pip install torch>=2.0.0
+ sed -i 's/normalized_shape, weight, bias,/normalized_shape, weight.to(torch.float32), bias.to(torch.float32),/' /usr/local/lib/python3.13/site-packages/torch/nn/functional.py
+ grep "normalized_shape, weight.to(torch.float32), bias.to(torch.float32)," /usr/local/lib/python3.13/site-packages/torch/nn/functional.py
+ ls
+ pip install --upgrade pip
+ pip install transformers>=4.36.0
+ pip install datasets>=2.15.0
+ pip install numpy>=1.24.0
+ pip install tqdm>=4.65.0
+ pip install accelerate>=0.26.0
+ pip install zstandard>=0.21.0
+ pip install bitsandbytes
+ pip install rouge_score
+ pip install -U "huggingface_hub[cli]"
+ huggingface-cli login --token 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
+ git config --global user.email "mrsarthakgupta@gmail.com"
+ git config --global user.name "mr-sarthakgupta"
+ cd # Go back to the parent directory
+ cd /workspace
+ cd run_exp_clone22
+ chmod +x run.sh
+ chmod +x evaluate_memorization.sh
+ bash run.sh
+ git add --all
+ git commit -m "Update file"
+ git branch
+ git remote add origin_2 https://mr-sarthakgupta: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@github.com/mr-sarthakgupta/pythia-backup.git
+ git push origin_2 main --force
+ nvidia-smi
