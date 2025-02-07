@@ -284,9 +284,6 @@ class MemorizationAnalyser:
         results: List = []
         results_summary: Dict = {}
 
-        context_lengths = [51, 102, 204, 512]
-        target_lengths = [51, 102, 204, 512]
-
         for context_length in tqdm(context_lengths, desc="Context Lengths"):
             for target_length in tqdm(target_lengths, desc=f"Processing Context Length: {context_length}", leave=False):
                 print(f"Model: {self.model_name}, Dataset: {self.dataset_name}, \
