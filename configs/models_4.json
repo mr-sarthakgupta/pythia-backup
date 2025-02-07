@@ -1,0 +1,7 @@
+[
+    {
+        "model_name": "EleutherAI/pythia-12b",
+        "model_family": "gpt_neox",
+        "model_path": "/path/to/model"
+    }
+]
