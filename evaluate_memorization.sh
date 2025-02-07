@@ -12,8 +12,8 @@ echo "Merged JSON files successfully."
 
 # Step 3: Define swap-every values
 swap_values=(
-    # "1/4"
-    # "1/4 2/4"
+    "1/4"
+    "1/4 2/4"
     "1/4 2/4 3/4"
     "4/4"
     "4/4 3/4"
