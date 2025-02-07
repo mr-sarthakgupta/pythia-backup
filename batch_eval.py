@@ -248,7 +248,6 @@ class MemorizationAnalyser:
                     f"swap_every={'_'.join(s.replace(' ', '_').replace('/', '%') for s in swap_every)}"
                 )
                 print(f"log_path: {self.log_path}")
-                # print(f"log_path={self.log_path}")
                 os.makedirs(self.log_path, exist_ok=True)
                 for swap in self.swap_every:
                     try:
@@ -284,6 +283,10 @@ class MemorizationAnalyser:
         )
         results: List = []
         results_summary: Dict = {}
+
+        context_lengths = [51, 102, 204, 512]
+        target_lengths = [51, 102, 204, 512]
+
         for context_length in tqdm(context_lengths, desc="Context Lengths"):
             for target_length in tqdm(target_lengths, desc=f"Processing Context Length: {context_length}", leave=False):
                 print(f"Model: {self.model_name}, Dataset: {self.dataset_name}, \
@@ -302,15 +305,10 @@ class MemorizationAnalyser:
                         max_length= max(context_lengths)+target_length,
                     ).to(self.model.device)
                     
-                    # print(f"inputs: {inputs}")
                     
                     prompt_tokens = inputs["input_ids"][:, :context_length]
                     attention_mask = inputs["attention_mask"][:, :context_length]
                     target_tokens = inputs["input_ids"][:, context_length:context_length + target_length]
-                    
-                    # print(f"target tokens: {target_tokens}")
-                    # print(f"prompt tokens: {prompt_tokens}")
-                    # print(f"prompt tokens attention mask: {attention_mask}")
                     
                     with torch.no_grad():
                         output_ids = self.model.generate(
@@ -438,12 +436,6 @@ class MemorizationAnalyser:
                             
                     
                     self.prompts += len(output_ids) # len(memorized_mask) would work too!
-                    # print(f"self.prompts: {self.prompts}")
-                    
-                    # print(f"prompt tokens device: {prompt_tokens.device}")
-                    # print(f"target tokens device: {target_tokens.device}")
-                    # print(f"attention_mask device: {prompt_tokens.device}")
-                    # print(f"inputs device: {inputs.input_ids.device}")
                     
                     if self.prompts % 1_000 == 0:
                         df = pd.DataFrame(results)
