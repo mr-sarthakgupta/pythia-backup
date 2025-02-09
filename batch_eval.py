@@ -68,6 +68,7 @@ def load_config_from_json(
     json_file: Path,
     config_type: Literal["model", "quant", "layer_swap"]
 ) -> Iterator[QuantConfig]:
+    print(json_file)
     with open(json_file, "r", encoding="utf-8") as f:
         configs = json.load(f)
     match config_type:
@@ -110,7 +111,7 @@ class MemorizationAnalyser:
         quant_config_swap: Optional[QuantConfig],
         layer_swap_config: Optional[LayerSwapConfig],
         swap_every: Optional[List[str]],
-        dataset_name: str = "monology/pile-uncopyrighted",
+        dataset_name: str = "monology/pile-uncopyrighted"
         batch_size: int = 128,
         device_map: Literal["cpu", "auto", "balanced"] = "balanced",
         dtype_map: Dict = create_dtype_map(),
@@ -248,6 +249,7 @@ class MemorizationAnalyser:
                     f"swap_every={'_'.join(s.replace(' ', '_').replace('/', '%') for s in swap_every)}"
                 )
                 print(f"log_path: {self.log_path}")
+                # print(f"log_path={self.log_path}")
                 os.makedirs(self.log_path, exist_ok=True)
                 for swap in self.swap_every:
                     try:
@@ -283,7 +285,10 @@ class MemorizationAnalyser:
         )
         results: List = []
         results_summary: Dict = {}
-
+        if baseline_memorized is not None:
+            with open(baseline_memorized, "r") as f:
+                json_data = json.load(f)
+                            
         for context_length in tqdm(context_lengths, desc="Context Lengths"):
             for target_length in tqdm(target_lengths, desc=f"Processing Context Length: {context_length}", leave=False):
                 print(f"Model: {self.model_name}, Dataset: {self.dataset_name}, \
@@ -297,15 +302,20 @@ class MemorizationAnalyser:
                     inputs = self.tokenizer(
                         prompts["text"],
                         return_tensors="pt",
-                        padding=True,
+                        padding="max_length",
                         truncation=True,
                         max_length= max(context_lengths)+target_length,
                     ).to(self.model.device)
                     
+                    # print(f"inputs: {inputs}")
                     
                     prompt_tokens = inputs["input_ids"][:, :context_length]
                     attention_mask = inputs["attention_mask"][:, :context_length]
                     target_tokens = inputs["input_ids"][:, context_length:context_length + target_length]
+                    
+                    # print(f"target tokens: {target_tokens}")
+                    # print(f"prompt tokens: {prompt_tokens}")
+                    # print(f"prompt tokens attention mask: {attention_mask}")
                     
                     with torch.no_grad():
                         output_ids = self.model.generate(
@@ -323,19 +333,17 @@ class MemorizationAnalyser:
                     # print(target_tokens.size())
                     # self.memorized += (target_tokens == output_ids[:, context_length:context_length + target_length]).all(dim=1).sum().item()
                     # self.prompts += len(output_ids)
-                    
+                    # print(target_tokens.shape)
+                    # print(output_ids.shape)
+                    # exit()
                     memorized_mask = (target_tokens == output_ids[:, context_length:context_length + target_length]).all(dim=1)  
                     self.memorized += memorized_mask.sum().item()
+                    key = f"Model={self.model_name}_Context={context_length}_Target={target_length}"
+                    print(f"key: {key}")
                     if baseline_memorized is not None:
-                        print(f"baseline memorized passed: {baseline_memorized}")
-                        with open(baseline_memorized, "r") as f:
-                            json_data = json.load(f)
-                            key = f"Model={self.model_name}_Context={context_length}_Target={target_length}"
-                            print(f"key: {key}")
-                            for data in json_data:
-                                print(f"json_data: {data}")
-                                if key in data:
-                                    baseline_memorized_ = data[key]["Index List"]     
+                        for data in json_data:
+                            if key in data:
+                                baseline_memorized_ = data[key]["Index List"]     
                     else:
                         baseline_memorized_ = []
                     
@@ -356,16 +364,16 @@ class MemorizationAnalyser:
                         )
                         if is_memorized and idx in baseline_memorized_:
                             self.memorized_list.append(self.prompts + idx)  
-                            print(f"  \
-                                Index: {self.prompts + idx} \
-                                Target: {target_tokens} \
-                                Decoded Target: {decoded_target} \
-                                Decoded Output: {decoded_output} \
-                                Context Length: {context_length} \
-                                Target Length: {target_length} \
-                                Memorized: {is_memorized} \
-                                Baseline Memorized: {bool(idx in baseline_memorized_)} \
-                                    ")
+                            # print(f"  \
+                            #     Index: {self.prompts + idx} \
+                            #     Target: {target_tokens} \
+                            #     Decoded Target: {decoded_target} \
+                            #     Decoded Output: {decoded_output} \
+                            #     Context Length: {context_length} \
+                            #     Target Length: {target_length} \
+                            #     Memorized: {is_memorized} \
+                            #     Baseline Memorized: {bool(idx in baseline_memorized_)} \
+                            #         ")
                             results.append({
                                 "Index": self.prompts + idx,  
                                 "Target": target_tokens[idx].tolist(), # Tensor -> List
@@ -377,21 +385,21 @@ class MemorizationAnalyser:
                                 "Baseline Memorized": bool(idx in baseline_memorized_)
                             })
                         elif is_memorized and idx not in baseline_memorized_:
-                            print(
-                                f"idx: {idx} memorized but not memorized by baseline model \
-                                Maybe a baseline memorized list was not provided. \
-                                Let's check.. baseline memorized list present: {bool(baseline_memorized)}"
-                            )
-                            print(f"  \
-                                Index: {self.prompts + idx} \
-                                Target: {target_tokens} \
-                                Decoded Target: {decoded_target} \
-                                Decoded Output: {decoded_output} \
-                                Context Length: {context_length} \
-                                Target Length: {target_length} \
-                                Memorized: {is_memorized} \
-                                Baseline Memorized: {bool(idx in baseline_memorized_)} \
-                                    ")
+                            # print(
+                            #     f"idx: {idx} memorized but not memorized by baseline model \
+                            #     Maybe a baseline memorized list was not provided. \
+                            #     Let's check.. baseline memorized list present: {bool(baseline_memorized)}"
+                            # )
+                            # print(f"  \
+                            #     Index: {self.prompts + idx} \
+                            #     Target: {target_tokens} \
+                            #     Decoded Target: {decoded_target} \
+                            #     Decoded Output: {decoded_output} \
+                            #     Context Length: {context_length} \
+                            #     Target Length: {target_length} \
+                            #     Memorized: {is_memorized} \
+                            #     Baseline Memorized: {bool(idx in baseline_memorized_)} \
+                            #         ")
                             results.append({
                                 "Index": self.prompts + idx,  
                                 "Target": target_tokens[idx].tolist(), # Tensor -> List
@@ -407,17 +415,17 @@ class MemorizationAnalyser:
                         
                         elif not is_memorized and idx in baseline_memorized_:
                             # gibberish logic
-                            print(f"  \
-                                Index: {self.prompts + idx} \
-                                Target: {target_tokens} \
-                                Decoded Target: {decoded_target} \
-                                Decoded Output: {decoded_output} \
-                                Context Length: {context_length} \
-                                Target Length: {target_length} \
-                                Memorized: {is_memorized} \
-                                Baseline Memorized: {bool(idx in baseline_memorized_)} \
-                                Rogue Scores: {measure_rouge.score(decoded_target, decoded_output)} \
-                                    ")
+                            # print(f"  \
+                            #     Index: {self.prompts + idx} \
+                            #     Target: {target_tokens} \
+                            #     Decoded Target: {decoded_target} \
+                            #     Decoded Output: {decoded_output} \
+                            #     Context Length: {context_length} \
+                            #     Target Length: {target_length} \
+                            #     Memorized: {is_memorized} \
+                            #     Baseline Memorized: {bool(idx in baseline_memorized_)} \
+                            #     Rogue Scores: {measure_rouge.score(decoded_target, decoded_output)} \
+                            #         ")
                             results.append({
                                 "Index": self.prompts + idx,  
                                 "Target": target_tokens[idx].tolist(), # Tensor -> List
@@ -433,6 +441,12 @@ class MemorizationAnalyser:
                             
                     
                     self.prompts += len(output_ids) # len(memorized_mask) would work too!
+                    # print(f"self.prompts: {self.prompts}")
+                    
+                    # print(f"prompt tokens device: {prompt_tokens.device}")
+                    # print(f"target tokens device: {target_tokens.device}")
+                    # print(f"attention_mask device: {prompt_tokens.device}")
+                    # print(f"inputs device: {inputs.input_ids.device}")
                     
                     if self.prompts % 1_000 == 0:
                         df = pd.DataFrame(results)
@@ -472,8 +486,10 @@ class MemorizationAnalyser:
         
         self.dataset : IterableDataset = load_dataset(
             self.dataset_name,
+            "20220301.en",
             split="train",
-            streaming=True
+            streaming=True,
+            trust_remote_code=True
         ).shuffle(
             seed  
         ).filter(
