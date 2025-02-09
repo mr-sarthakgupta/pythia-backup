@@ -6,7 +6,19 @@ python batch_eval.py --model-config configs/models_$MODEL_NUM.json --quant-confi
 
 # Step 2: Merge all JSON files into merged.json
 echo "Merging all JSON files into merged.json..."
-find . -name "summary.json" -type f -exec cat {} + | jq -s '.' > ./logs/merged.json
+# find . -name "summary.json" -type f -exec cat {} + | jq -s '.' > ./logs/merged.json
+
+echo "[" > ./logs/merged.json
+first=true
+find . -name "summary.json" -type f -print0 | while IFS= read -r -d '' file; do
+    if [ "$first" = true ]; then
+        first=false
+    else
+        echo "," >> ./logs/merged.json
+    fi
+    cat "$file" >> ./logs/merged.json
+done
+echo "]" >> ./logs/merged.json
 
 echo "Merged JSON files successfully."
 
@@ -33,3 +45,8 @@ for swap in "${swap_values[@]}"; do
 done
 
 echo "All evaluations completed."
+
+git remote -v
+git add logs
+git commit -m "Auto update results added" || echo "commit failed"
+git push -u origin main || echo "git push failed"
