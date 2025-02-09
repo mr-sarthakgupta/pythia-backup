@@ -111,7 +111,7 @@ class MemorizationAnalyser:
         quant_config_swap: Optional[QuantConfig],
         layer_swap_config: Optional[LayerSwapConfig],
         swap_every: Optional[List[str]],
-        dataset_name: str = "monology/pile-uncopyrighted"
+        dataset_name: str = "monology/pile-uncopyrighted",
         batch_size: int = 128,
         device_map: Literal["cpu", "auto", "balanced"] = "balanced",
         dtype_map: Dict = create_dtype_map(),
