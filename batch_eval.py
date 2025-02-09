@@ -127,7 +127,7 @@ class MemorizationAnalyser:
         self.dtype_map = dtype_map
         self.dtype = self.dtype_map[quant_config.bnb_4bit_compute_dtype]
         
-        self.load_in = "fp32"
+        self.load_in = "fp16"
         if quant_config.load_in_4bit:
             self.load_in = "4bit/" +  quant_config.bnb_4bit_quant_type
             if quant_config.bnb_4bit_use_double_quant:
