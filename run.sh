@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # We have 8 GPUs available, but we need only 4 for the current batch sizes.
-batch_size=(500 250 100 50 20)
+batch_size=(800 400 160 80 32)
 
 for i in {0..4}; do
   GPU_ID=$((i))  # Shift GPU allocation to 4-7
