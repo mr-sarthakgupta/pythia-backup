@@ -319,8 +319,8 @@ class MemorizationAnalyser:
                     
                     with torch.no_grad():
                         output_ids = self.model.generate(
-                            prompt_tokens,
-                            attention_mask=attention_mask,
+                            prompt_tokens.half(),
+                            attention_mask=attention_mask.half(),
                             max_new_tokens=target_length,
                             do_sample=False,
                             pad_token_id=self.tokenizer.pad_token_id
