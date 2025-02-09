@@ -318,14 +318,15 @@ class MemorizationAnalyser:
                     # print(f"prompt tokens attention mask: {attention_mask}")
                     
                     with torch.no_grad():
-                        output_ids = self.model.generate(
-                            prompt_tokens,
-                            attention_mask=attention_mask,
-                            max_new_tokens=target_length,
-                            do_sample=False,
-                            pad_token_id=self.tokenizer.pad_token_id
-                        )
-                        
+                        with torch.autocast("cuda"):
+                            output_ids = self.model.generate(
+                                prompt_tokens,
+                                attention_mask=attention_mask,
+                                max_new_tokens=target_length,
+                                do_sample=False,
+                                pad_token_id=self.tokenizer.pad_token_id
+                            )
+                            
                         # print(f"output_ids: {output_ids}")
                         # print(f"decoded output: {self.tokenizer.batch_decode(output_ids)}")
                     
